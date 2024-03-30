@@ -27,17 +27,17 @@ const authSlice = createSlice({
         state.error = true;
         state.isLoggedIn = false;
       })
-      .addCase(logIn.pending, (state) => {
-        state.error = false;
-        state.isLoggedIn = true;
-      })
+      // .addCase(logIn.pending, (state) => {
+        // state.error = false;
+        // state.isLoggedIn = true;
+      // })
       .addCase(logIn.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
-      .addCase(logIn.rejected, (state) => {
-        state.error = true;
+      .addCase(logIn.rejected, (state , action) => {
+        state.error = action.payload;
         state.isLoggedIn = false;
       })
       .addCase(logOut.fulfilled, (state) => {
