@@ -7,5 +7,15 @@
   }
   
   .link.active {
-    color: #e84a5f;
+    color:var(--hover-color);
+  }
+  .auth{
+    padding-left: 20px;
+  }
+  .text{
+    font-weight: 700;
+    color:var(--secondary-color);
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }

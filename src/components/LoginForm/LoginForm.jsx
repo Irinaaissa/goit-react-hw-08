@@ -12,6 +12,7 @@ export default function LoginForm() {
   };
 
   return (
+    <div className={css.formContainer}>
     <Formik
       initialValues={{
         email: "",
@@ -21,15 +22,17 @@ export default function LoginForm() {
     >
       <Form className={css.form} autoComplete="off">
         <label className={css.label}>
-          Email
-          <Field type="email" name="email" />
+        <span className={css.text}> Email</span> 
+          
+          <Field className={css.field} type="email" name="email" />
         </label>
         <label className={css.label}>
-          Password
-          <Field type="password" name="password" />
+         <span className={css.text}> Password </span> 
+          <Field className={css.field} type="password" name="password" />
         </label>
-        <button type="submit">Log In</button>
+        <button className={css.btn} type="submit">Log In</button>
       </Form>
     </Formik>
+    </div>
   );
 }

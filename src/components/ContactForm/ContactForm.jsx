@@ -6,7 +6,8 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 
-export default function ContactForm() {
+
+export default function ContactForm({ closeContactForm }) {
   const dispatch = useDispatch();
 
   const nameFieldId = useId();
@@ -21,7 +22,7 @@ export default function ContactForm() {
       .required('Required'),
     number: Yup.string()
       .trim()
-      .min(3, 'Too short!')
+      .min(7, 'Too short!')
       .max(50, 'Too long!')
       .required('Required'),
   });
@@ -29,28 +30,33 @@ export default function ContactForm() {
   function handleSubmit(values, actions) {
     dispatch(addContact(values));
     actions.resetForm();
+    closeContactForm(); 
   }
   
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-      validationSchema={validationSchema}
-    >
-      <Form className={css.form}>
-        <FormInput className={css.field} id={nameFieldId} type="text" name="name">
-          Name
-        </FormInput>
+    <div className={css.formContainer}>
+      
+<Formik 
+  initialValues={initialValues}
+  onSubmit={handleSubmit}
+  validationSchema={validationSchema}
+>
+  <Form className={css.form}>
+    <FormInput className={css.field} id={nameFieldId} type="text" name="name">
+      <span className={css.text}> Name </span>
+    </FormInput>
+    <FormInput className={css.field} id={numberFieldId} type="text" name="number">
+      <span className={css.text}> Number</span>
+    </FormInput>
+    <button className={css.btn} type="submit">
+    Add contact
+    </button>
+  </Form>
+</Formik>
+    </div>
 
-        <FormInput className={css.field} id={numberFieldId} type="text" name="number">
-          Number
-        </FormInput>
 
-        <button className={css.btn} type="submit">
-        Add contact
-        </button>
-      </Form>
-    </Formik>
+
   );
 }
 

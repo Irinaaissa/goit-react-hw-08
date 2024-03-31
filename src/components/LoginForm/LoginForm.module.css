@@ -1,5 +1,12 @@
 .form {
     width: 320px;
+    display: flex;
+flex-direction: column;
+border: 2px solid;
+padding: 12px 16px;
+border-radius: 6px;
+width: 488px;
+background-color: var(--background-color);
   }
   
   .label {
@@ -7,3 +14,40 @@
     flex-direction: column;
     margin-bottom: 16px;
   }
+  .btn {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: 2px solid lightslategray;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    box-shadow: 0 4px 8px rgba(2, 0, 0, 2.4);
+  }
+    
+  .btn:hover,
+  .btn:focus {
+    background-color: #9999;
+    border: 2px solid gray;
+  }
+  .text{
+    color: var(--secondary-color);
+    font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+     
+  }
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+    .field{
+      
+      height: 30px;
+    }

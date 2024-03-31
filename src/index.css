@@ -1,8 +1,32 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #434455;
+  --secondary-color: #ffffff;
+  --background-color: #6872e0;
+  --link-color: #0e166d;
+  --text-color: #2E2F42;
+  --hover-color:#e84a5f;
+
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ line-height: 1.5;
+ font-weight: 400;
+  }
 /* :root { */
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  /* line-height: 1.5; */
-  /* font-weight: 400; */
+  /* --primary-color: #434455; */
+  /* --secondary-color: #ffffff; */
+  /* --background-color: #6872e0; */
+  /* --link-color: #0e166d; */
+  /* --text-color: #2E2F42; */
 /*  */
+/* } */
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
@@ -33,6 +57,7 @@
 /* h1 { */
   /* font-size: 3.2em; */
   /* line-height: 1.1; */
+  /* margin: 0; */
 /* } */
 /*  */
 /* button { */
@@ -66,5 +91,56 @@
   /* } */
   /* button { */
     /* background-color: #f9f9f9; */
+  /* } */
+/* } */
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width: 374px) { */
+  /* .container {    */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* padding-left: 16px; */
+    /* padding-right: 16px; */
+  /* } */
+/* } */
+/* @media screen and (min-width: 375px) { */
+  /* .container { */
+    /* width: 375px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+  /* } */
+/* } */
+/* @media screen and (min-width: 768px) { */
+  /* .container { */
+    /* width: 704px; */
+    /* padding-left: 16px; */
+    /* padding-right: 16px; */
+  /* } */
+/* } */
+/* @media screen and (min-width: 1280px) { */
+  /* .container { */
+    /* width: 1112px;   */
+    /* padding-left: 64px; */
+    /* padding-right: 64px;  */
+  /* } */
+  /* h1 { */
+    /* font-size: 3.2em; */
+    /* line-height: 1.1; */
+    /* margin: 0; */
+  /* } */
+/* } */
+/* @media screen and (min-width: 1440px) { */
+  /* .container { */
+    /* width: 1272px;   */
   /* } */
 /* } */

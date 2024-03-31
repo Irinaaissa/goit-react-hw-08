@@ -1,22 +1,58 @@
+import css from "./Contact.module.css";
+import { FaPhone } from "react-icons/fa6";
+import { IoPersonSharp } from "react-icons/io5";
+import { useDispatch } from "react-redux";
+// import { deleteContact } from "../../redux/contacts/operations";
+import { useState } from "react";
 
-import css from './Contact.module.css';
-import { FaPhone } from 'react-icons/fa6';
-import { IoPersonSharp } from 'react-icons/io5';
-import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contacts/operations';
+import Modal from "../Modal/Modal";
 
-export default function Contact({ item:{name, number,id}}) {
+
+export default function Contact({ item: { name, number, id } }) {
   const dispatch = useDispatch();
  
+  const [isModalActive, setModalActive] = useState(false);
+
+  const handleModalOpen = () => {
+    setModalActive(true);
+  };
+  const handleModalClose = () => {
+    setModalActive(false);
+  };
+
   return (
     <div className={css.contactCard}>
-    <div>
-      <p className={css.info}><span className={css.iconWrapper}><IoPersonSharp  /></span>{name} </p>
-      <p className={css.info}><span className={css.iconWrapper}><FaPhone /></span> {number}</p>
-    </div>
-    <button className={css.btn} onClick={() => dispatch(deleteContact(id))}>
+      <div>
+        <p className={css.info}>
+          <span className={css.iconWrapper}>
+            <IoPersonSharp />
+          </span>
+          {name}{" "}
+        </p>
+        <p className={css.info}>
+          <span className={css.iconWrapper}>
+            <FaPhone />
+          </span>{" "}
+          {number}
+        </p>
+      </div>
+      {/* <button className="button" type="button" onClick={handleModalOpen}> */}
+        {/* open modal */}
+      {/* </button> */}
+      <button className={css.btn} type="button" onClick={handleModalOpen}>
   Delete
 </button>
+      {/* <button className={css.btn} onClick={() => dispatch(deleteContact(id))}> */}
+        {/* Delete */}
+      {/* </button> */}
+      <div>
+        {isModalActive && (
+          <Modal title="some modal title" onClose={handleModalClose}>
+            Hello world
+          </Modal>
+        )}
+      </div>
     </div>
+    
   );
 }

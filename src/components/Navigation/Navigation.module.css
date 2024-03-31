@@ -3,7 +3,10 @@
     text-decoration: none;
     padding: 12px;
     font-weight: 700;
-    color: #2a363b;
+    color:var(--secondary-color);
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   
   .link.active {
