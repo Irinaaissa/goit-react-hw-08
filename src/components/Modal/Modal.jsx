@@ -1,25 +1,25 @@
 import { useDispatch } from "react-redux";
 import css from "./Modal.module.css";
-// import { useState } from "react";
+import { useState } from "react";
 import { deleteContact } from "../../redux/contacts/operations";
 //
-export default function Modal({ closeContactForm, id }) {
+export default function Modal() {
   const dispatch = useDispatch();
   const handleDeleteContact = () => {
     dispatch(deleteContact(id));
   };
 
-  const handleCloseModal = () => {
-    dispatch(closeContactForm);
-  };
+  // const handleCloseModal = () => {
+    // dispatch(closeContactForm);
+  // };
 
-  // const [showModal, setShowModal] = useState(false);
-  // const handleButtonClick = () => {
-  // showModal(true);
-  //   };
-  //   const closeContactForm = () => {
-  // setShowModal(false);
-  //   };
+  const [showModal, setShowModal] = useState(false);
+  const handleButtonClick = () => {
+  showModal(true);
+    };
+    const closeContactForm = () => {
+  setShowModal(false);
+    };
 
   return (
     <div className={css.fixedOverlay}>
@@ -32,7 +32,7 @@ export default function Modal({ closeContactForm, id }) {
           >
             Delete
           </button>
-          <button type="submit" onClick={() => dispatch(handleCloseModal())}>
+          <button type="submit" onClick={() => dispatch(closeContactForm())}>
             Cancel
           </button>
         </div>
