@@ -1,16 +1,16 @@
 import css from "./Contact.module.css";
 import { FaPhone } from "react-icons/fa6";
 import { IoPersonSharp } from "react-icons/io5";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { deleteContact } from "../../redux/contacts/operations";
 import { useState } from "react";
 
 import Modal from "../Modal/Modal";
 
 
-export default function Contact({ item: { name, number, id } }) {
-  const dispatch = useDispatch();
- 
+export default function Contact({ item: { name, number } }) {
+  // const dispatch = useDispatch();
+//  
   const [isModalActive, setModalActive] = useState(false);
 
   const handleModalOpen = () => {
@@ -46,11 +46,11 @@ export default function Contact({ item: { name, number, id } }) {
         {/* Delete */}
       {/* </button> */}
       <div>
-        {isModalActive && (
-          <Modal title="some modal title" onClose={handleModalClose}>
-            Hello world
-          </Modal>
-        )}
+        {isModalActive && 
+          <Modal  />
+            
+          
+      }
       </div>
     </div>
     
