@@ -6,25 +6,63 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(30, 22, 47, 0.5);
   }
   .modal {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -100px;
-    margin-top: -75px;
+    position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Додайте необхідний z-index */
+    
+    
   }
   .modalContainer {
-    background-color: #fff;
-    width: 200px;
-    height: 150px;
+    
+    background-color:var(--first-color);
+    width: 500px;
+  height: 300px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(30, 22, 47, 2.5);
   }
   
+.text{
+  color:rgb(242, 8, 54);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 
+.btn {
+  width: 40px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--link-color);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(2, 0, 0, 2.4);
+ 
+ 
+}
+  
+.btn:hover,
+.btn:focus {
+  background-color: #9999;
+  border: 2px solid gray;
+}
+.button{
+  display: flex;
 
-
-
+}
 
 
 

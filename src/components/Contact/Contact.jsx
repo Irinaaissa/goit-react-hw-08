@@ -7,13 +7,14 @@ import { useState } from "react";
 
 import Modal from "../Modal/Modal";
 
-
-export default function Contact({ item: { name, number } }) {
+export default function Contact({ item: { name, number, id } }) {
   // const dispatch = useDispatch();
-//  
+  //
   const [isModalActive, setModalActive] = useState(false);
-
+  // const [userId,setUserId] = useState("");
+  //
   const handleModalOpen = () => {
+    // setUserId(id);
     setModalActive(true);
   };
   const handleModalClose = () => {
@@ -37,22 +38,22 @@ export default function Contact({ item: { name, number } }) {
         </p>
       </div>
       {/* <button className="button" type="button" onClick={handleModalOpen}> */}
-        {/* open modal */}
+      {/* open modal */}
       {/* </button> */}
       <button className={css.btn} type="button" onClick={handleModalOpen}>
-  Delete
-</button>
+        Delete
+      </button>
+      {/* <button className={css.btn} type="button"> */}
+        {/* Edit */}
+      {/* </button> */}
       {/* <button className={css.btn} onClick={() => dispatch(deleteContact(id))}> */}
-        {/* Delete */}
+      {/* Delete */}
       {/* </button> */}
       <div>
-        {isModalActive && 
-          <Modal  />
-            
-          
-      }
+        {isModalActive && (
+          <Modal handleModalClose={handleModalClose} userId={id} />
+        )}
       </div>
     </div>
-    
   );
 }
