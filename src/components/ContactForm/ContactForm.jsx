@@ -5,6 +5,8 @@ import css from './ContactForm.module.css';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
+import { notify}from "../Toaster/Toaster";
+// import  { Toaster } from 'react-hot-toast';
 
 
 export default function ContactForm({ closeContactForm }) {
@@ -31,6 +33,7 @@ export default function ContactForm({ closeContactForm }) {
     dispatch(addContact(values));
     actions.resetForm();
     closeContactForm(); 
+    notify();
   }
   
   return (
@@ -48,9 +51,11 @@ export default function ContactForm({ closeContactForm }) {
     <FormInput className={css.field} id={numberFieldId} type="text" name="number">
       <span className={css.text}> Number</span>
     </FormInput>
-    <button className={css.btn} type="submit">
+    <button   className={css.btn} type="submit"> 
     Add contact
+    
     </button>
+    
   </Form>
 </Formik>
     </div>

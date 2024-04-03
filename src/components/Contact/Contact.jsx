@@ -1,10 +1,9 @@
 import css from "./Contact.module.css";
 import { FaPhone } from "react-icons/fa6";
 import { IoPersonSharp } from "react-icons/io5";
-// import { useDispatch } from "react-redux";
-// import { deleteContact } from "../../redux/contacts/operations";
 import { useState } from "react";
-
+import * as React from 'react';
+// import Button from '@mui/material/Button';
 import Modal from "../Modal/Modal";
 
 export default function Contact({ item: { name, number, id } }) {

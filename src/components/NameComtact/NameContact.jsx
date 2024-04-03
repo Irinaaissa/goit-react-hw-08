@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import ContactForm from "../ContactForm/ContactForm";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-
+import Button from '@mui/material/Button';
 export default function NameContact() {
   const dispatch = useDispatch();
   const [showContactForm, setShowContactForm] = useState(false);
@@ -20,18 +20,18 @@ export default function NameContact() {
     <div className={css.container}>
       <div className={css.plus}>
         <h1 className={css.heading}>CONTACTS</h1>
-        <button
+        <Button
           className={css.button}
           onClick={() => dispatch(handleButtonClick)}
         >
           <FaPlus style={{ fontSize: 30 }} />
-        </button>
-        <button
+        </Button>
+        <Button
           className={css.button}
           onClick={() => dispatch(closeContactForm)}
         >
           <AiOutlineClose style={{ fontSize: 30 }} />
-        </button>
+        </Button>
         </div>
 
       {showContactForm && <ContactForm closeContactForm={closeContactForm} />}

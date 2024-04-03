@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 import Layout from "../Layout/Layout";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,6 +12,7 @@ const HomePage = lazy(() => import("../../pages/Home"));
 const RegisterPage = lazy(() => import("../../pages/Register"));
 const LoginPage = lazy(() => import("../../pages/Login"));
 const ContactsPage = lazy(() => import("../../pages/Contacts"));
+// import  { Toaster } from 'react-hot-toast';
 
 export default function App() {
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -40,7 +41,7 @@ export default function App() {
       </Routes>
     </Suspense>
   )}
-  <Toaster />
+  {/* <Toaster /> */}
 </Layout>
   );
   

@@ -14,13 +14,20 @@
 
     gap: 20px;
   }
-  .button{ 
-    margin: 0;
-   justify-content: center;
-   align-items: center;
-    width: 42px;
-    height: 42px;
-  }
+  
+    .button {
+      color: var(--secondary-color);
+      background-color: var(--primary-color);
+      border: 2px solid lightslategray;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      box-shadow: 0 4px 8px rgba(2, 0, 0, 2.4);
+    
+    }
+  
   .container {
    
    margin-right: auto;
