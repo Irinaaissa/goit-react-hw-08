@@ -33,7 +33,7 @@ export default function SearchBox() {
         value={nameFilter}
         id={searchId}
         onChange={handleChange}
-        placeholder="Search by name"
+        placeholder="Search by number or name"
       />
       
       
