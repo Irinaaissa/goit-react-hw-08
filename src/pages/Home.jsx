@@ -8,14 +8,12 @@ export default function Home() {
         <span role="img" aria-label="Greeting icon">
           💁‍♀️
         </span>
+        <div> </div>
         <p>
-This is a phone book. With which you can add contacts and delete contacts. To use its functions you 
-need to register.
-</p>
+          This is a phone book. With which you can add contacts and delete
+          contacts. To use its functions you need to register.
+        </p>
       </PageTitle>
-      
-      
-      
     </div>
   );
 }

@@ -5,7 +5,7 @@
     padding: 12px 16px;
     border-radius: 6px;
     width: 488px;
-    background-color: var(--background-color);
+    background: radial-gradient(circle farthest-corner at 100px 50px, #87c4f3, #123ae9);
   }
   
   .field {

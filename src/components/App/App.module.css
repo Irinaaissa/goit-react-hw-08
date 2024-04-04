@@ -1,5 +1,6 @@
 #root {
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -11,9 +12,9 @@
   --background-color: #6872e0;
   --link-color: #0e166d;
   --text-color: #2E2F42;
-  --hover-color:#e84a5f;
+  --hover-color:#e50926;
   --first-color:rgb(164, 210, 241);
-  background-color: var(--first-color);
+  background-color: var(--primary-color);
 
 }
 /*  */

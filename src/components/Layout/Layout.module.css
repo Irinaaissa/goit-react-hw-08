@@ -7,5 +7,6 @@
   
  line-height: 1.5;
  font-weight: 400;
+ background: radial-gradient(circle farthest-corner at 100px 50px, #87c4f3, #123ae9);
 }
 

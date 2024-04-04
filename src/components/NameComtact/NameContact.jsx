@@ -20,13 +20,13 @@ export default function NameContact() {
     <div className={css.container}>
       <div className={css.plus}>
         <h1 className={css.heading}>CONTACTS</h1>
-        <Button
+        <Button variant="contained"
           className={css.button}
           onClick={() => dispatch(handleButtonClick)}
         >
           <FaPlus style={{ fontSize: 30 }} />
         </Button>
-        <Button
+        <Button variant="contained"
           className={css.button}
           onClick={() => dispatch(closeContactForm)}
         >

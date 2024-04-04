@@ -59,9 +59,6 @@ export default function ContactForm({ closeContactForm }) {
   </Form>
 </Formik>
     </div>
-
-
-
   );
 }
 
