@@ -24,7 +24,7 @@ export default function SearchBox() {
       <label
       className={css.label}
        htmlFor={searchId}>
-       <span className={css.text}> Find contacts by name </span> 
+       <span className={css.text}> Search by number or name</span> 
         </label>
         <input
         className={css.field}
