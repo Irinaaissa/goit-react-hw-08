@@ -2,7 +2,7 @@ import css from "./Contact.module.css";
 import { FaPhone } from "react-icons/fa6";
 import { IoPersonSharp } from "react-icons/io5";
 import { useState } from "react";
-import * as React from 'react';
+import * as React from "react";
 // import Button from '@mui/material/Button';
 import Modal from "../Modal/Modal";
 
@@ -35,15 +35,19 @@ export default function Contact({ item: { name, number, id } }) {
           </span>{" "}
           {number}
         </p>
+        
+        
+        
       </div>
+      <button className={css.btn} type="button" onClick={handleModalOpen}>
+  Delete
+</button>
       {/* <button className="button" type="button" onClick={handleModalOpen}> */}
       {/* open modal */}
       {/* </button> */}
-      <button className={css.btn} type="button" onClick={handleModalOpen}>
-        Delete
-      </button>
+
       {/* <button className={css.btn} type="button"> */}
-        {/* Edit */}
+      {/* Edit */}
       {/* </button> */}
       {/* <button className={css.btn} onClick={() => dispatch(deleteContact(id))}> */}
       {/* Delete */}
