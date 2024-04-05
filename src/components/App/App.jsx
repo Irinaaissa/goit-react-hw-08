@@ -5,9 +5,10 @@ import Layout from "../Layout/Layout";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from "../../redux/auth/operations";
-import { RestrictedRoute } from "../RestrictedRoute";
-import { PrivateRoute } from "../PrivateRoute";
+
+import { PrivateRoute } from "../Registration/PrivateRoute"
 import css from "./App.module.css";
+import { RestrictedRoute } from "../Registration/RestrictedRoute";
 const HomePage = lazy(() => import("../../pages/Home"));
 const RegisterPage = lazy(() => import("../../pages/Register"));
 const LoginPage = lazy(() => import("../../pages/Login"));

@@ -8,7 +8,8 @@ import { fetchContacts } from '../redux/contacts/operations'
 import Loader from '../components/Loader/Loader'
 import Error from '../components/Error/Error'
 import { selectError, selectLoading } from '../redux/contacts/selectors'
-import NameContact from '../components/NameComtact/NameContact'
+import NameContact from '../components/ContactForm/ContactForm'
+
 
 
 
@@ -22,8 +23,9 @@ useEffect(()=>{
   return (
     <>
     <div>
+      
       <NameContact/>
-      {/* <ContactForm /> */}
+       {/* <ContactForm />  */}
       {loading && <Loader>Loading message</Loader>}
       {error && <Error>Error message</Error>}
       <SearchBox />
