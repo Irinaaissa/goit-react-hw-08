@@ -57,10 +57,12 @@
   line-height: 1.1;
   letter-spacing: 0.02em;
   
- 
- 
+  white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
 
 }
+
 
 .iconWrapper {
   display: inline-flex;
